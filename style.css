@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f5f7fb;
+  padding: 20px;
+}
+
+h1 {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 15px;
+  color: blue;
+  background-color: #dbeafe;
+  border-radius: 10px;
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 33.33%;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.value {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.value h2 {
+  font-size: 24px;
+}
+
+.total-balance {
+  background-color: #dbeafe;
+}
+
+.total-balance .sign {
+  background-color: #93c5fd;
+  color: blue;
+}
+
+.total-balance .value h2 {
+  color: blue;
+}
+
+.total-income {
+  background-color: #dcfce7;
+}
+
+.total-income .sign {
+  background-color: #86efac;
+  color: green;
+}
+
+.total-income .value h2 {
+  color: green;
+}
+
+.total-expense {
+  background-color: #fee2e2;
+}
+
+.total-expense .sign {
+  background-color: #fca5a5;
+  color: red;
+}
+
+.total-expense .value h2 {
+  color: red;
+}
+
+.input {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.input h2 {
+  margin-bottom: 20px;
+}
+
+.inputs {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.inputs div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 5px;
+}
+
+.inputs label {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputs .submit-button {
+  justify-content: flex-end;
+}
+
+.submit-button button {
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+
+.table {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.table h2 {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+th {
+  background-color: #f1f5f9;
+  padding: 15px;
+  font-size: 14px;
+  color: #475569;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.income-amount {
+  color: green;
+  font-weight: bold;
+}
+
+.expense-amount {
+  color: red;
+  font-weight: bold;
+}
+
+.income,
+.expense {
+  background-color: #93c5fd;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+.income {
+  background-color: #86efac;
+}
+.expense {
+  background-color: #fca5a5;
+}
+
+.delete-btn {
+  padding: 5px 15px;
+  background-color: #fca5a5;
+  color: red;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#message {
+  padding: 25px;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 10;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 5px 15px gray;
+  visibility: hidden;
+}
+
+.message-sucess {
+  background-color: rgb(200, 255, 200);
+  color: green;
+}
+
+.message-failed {
+  background-color: rgb(255, 200, 200);
+  color: red;
+}
+
+@media (max-width: 900px) {
+  .status {
+    flex-wrap: wrap;
+  }
+
+  .slide {
+    width: 48%;
+  }
+
+  .inputs {
+    flex-wrap: wrap;
+  }
+  .inputs div {
+    flex: 45%;
+  }
+
+  .table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
+
+@media (max-width: 600px) {
+  .status {
+    flex-direction: column;
+  }
+
+  .slide {
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .inputs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 650px;
+  }
+}
